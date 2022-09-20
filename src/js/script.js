@@ -35,4 +35,16 @@ $(document).ready(function(){
 
   toggleSlide('.catalog-item__link');
   toggleSlide('.catalog-item__prev');
+
+  //modal
+
+  $('[data-modal=consultation]').on('click', function() {
+    $('.overlay, #consultation').fadeIn();
+  });
+  $('.modal__close').on('click', function() {
+    $('.overlay, #consultation, #order, #thanks').fadeOut();
+  });
+  $('.button_mini').on('click', function() {
+    $('.overlay, #order').fadeIn();
+  });
 });
